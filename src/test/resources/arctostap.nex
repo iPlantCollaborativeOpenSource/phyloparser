@@ -1,0 +1,59 @@
+#NEXUS
+[written Tue Dec 21 16:38:02 MST 2010 by Mesquite  version 2.73 (build 544) at dhcp-96870a6c.ece.arizona.edu/150.135.10.108]
+
+BEGIN TAXA;
+	TITLE Taxa;
+	DIMENSIONS NTAX=10;
+	TAXLABELS
+		Arbutus_mensiezii Arbutus_unedo Arbutus_andrachne Xylococcus_bicolor Arctous_rubra Arctostaphylos_hookeri Arctostaphylos_nummularia Arctostaphylos_uva Comarostaphylis_diversifolia Comarostaphylis_discolor 
+	;
+
+END;
+
+
+BEGIN CHARACTERS;
+	TITLE  Character_Matrix;
+	DIMENSIONS  NCHAR=4;
+	FORMAT DATATYPE = CONTINUOUS GAP = - MISSING = ?;
+CHARSTATELABELS 
+		1 ln.Leaf.Area.cm2,
+		2 ln.SeedMass.mg,
+		3 maxHeight.m,
+		4 ln.maxheight.m ; 
+	MATRIX
+	Arbutus_mensiezii              4.498009219 0.54696467 40.0 3.688879454
+	Arbutus_unedo                  0.732504617 1.029619417 10.0 2.302585093
+	Arbutus_andrachne              4.074631108 1.991975516 6.0 1.791759469
+	Xylococcus_bicolor             -2.876820725 3.790984677 2.5 0.916290732
+	Arctous_rubra                  -8.393296907 ? 0.5 -0.693147181
+	Arctostaphylos_hookeri         -12.37874356 2.119263036 1.0 0.0
+	Arctostaphylos_nummularia      -30.79113882 ? 2.0 0.693147181
+	Arctostaphylos_uva             -17.89761467 2.691920819 0.5 -0.693147181
+	Comarostaphylis_diversifolia   0.610950994 2.987700102 5.0 1.609437912
+	Comarostaphylis_discolor       2.151113796 ? ? ?
+
+;
+
+END;
+BEGIN ASSUMPTIONS;
+	TYPESET * UNTITLED   =  Squared:  1 -  4;
+
+END;
+
+BEGIN TREES;
+	Title Imported_trees;
+	LINK Taxa = Taxa;
+	TRANSLATE
+		1 Arbutus_mensiezii,
+		2 Arbutus_unedo,
+		3 Arbutus_andrachne,
+		4 Xylococcus_bicolor,
+		5 Arctous_rubra,
+		6 Arctostaphylos_hookeri,
+		7 Arctostaphylos_nummularia,
+		8 Arctostaphylos_uva,
+		9 Comarostaphylis_diversifolia,
+		10 Comarostaphylis_discolor;
+	TREE 'Imported tree 0+' = (1:32.2,((2:5.6,3:5.6):22.0,(4:20.7,((5:15.8,(6:2.8,(7:1.5,8):1.5):1.3):13.0):1.5,(9:13.0,10:13.0):4.3):3.4):6.9):4.6;
+
+END;

@@ -1,0 +1,75 @@
+#NEXUS
+[written Tue Dec 21 15:41:54 MST 2010 by Mesquite  version 2.73 (build 544) at dhcp-96870a6c.ece.arizona.edu/150.135.10.108]
+
+BEGIN TAXA;
+	TITLE Taxa;
+	DIMENSIONS NTAX=18;
+	TAXLABELS
+		Acer_mono Acer_crataegifolium Acer_pensylvanicum Acer_rufinerve Acer_tschonoskii Acer_saccharum Acer_palmatum Acer_sieboldianum Acer_circinatum Acer_diabolicum Acer_carpinifolium Acer_spicatum Acer_nipponicum Acer_macrophyllum Acer_distylum Acer_rubrum Acer_saccharinum Acer_glabrum
+	;
+
+END;
+
+
+BEGIN CHARACTERS;
+	TITLE  Character_Matrix;
+	DIMENSIONS  NCHAR=3;
+	FORMAT DATATYPE = CONTINUOUS GAP = - MISSING = ?;
+CHARSTATELABELS
+		1 MatHt.m,
+		2 In.LeafArea.cm2,
+		3 In.SeedSize.mg ;
+	MATRIX
+	Acer_mono             25.0 3.843 3.584
+	Acer_crataegifolium   7.0 3.082 2.603
+	Acer_pensylvanicum    12.0 5.343 3.711
+	Acer_rufinerve        15.0 4.403 3.219
+	Acer_tschonoskii      13.0 3.486 3.21
+	Acer_saccharum        35.0 4.742 4.168
+	Acer_palmatum         25.0 3.045 3.005
+	Acer_sieboldianum     10.0 3.415 2.999
+	Acer_circinatum       9.1 4.115 4.588
+	Acer_diabolicum       18.0 4.725 4.37
+	Acer_carpinifolium    10.0 4.186 4.182
+	Acer_spicatum         8.0 4.21 3.021
+	Acer_nipponicum       18.0 5.426 5.382
+	Acer_macrophyllum     27.0 4.809 4.939
+	Acer_distylum         10.0 4.547 3.966
+	Acer_rubrum           31.0 3.068 2.989
+	Acer_saccharinum      31.0 3.969 5.541
+	Acer_glabrum          9.6 3.076 3.521
+
+;
+
+END;
+BEGIN ASSUMPTIONS;
+	TYPESET * UNTITLED   =  Squared:  1 -  3;
+
+END;
+
+BEGIN TREES;
+	Title Imported_trees;
+	LINK Taxa = Taxa;
+	TRANSLATE
+		1 Acer_mono,
+		2 Acer_crataegifolium,
+		3 Acer_pensylvanicum,
+		4 Acer_rufinerve,
+		5 Acer_tschonoskii,
+		6 Acer_saccharum,
+		7 Acer_palmatum,
+		8 Acer_sieboldianum,
+		9 Acer_circinatum,
+		10 Acer_diabolicum,
+		11 Acer_carpinifolium,
+		12 Acer_spicatum,
+		13 Acer_nipponicum,
+		14 Acer_macrophyllum,
+		15 Acer_distylum,
+		16 Acer_rubrum,
+		17 Acer_saccharinum,
+		18 Acer_glabrum;
+	TREE Imported_tree_0 = ((((((1:30.8,((2:8.8,3:8.8):6.3,(4:2.3,5:2.3):12.8):15.7):6.8,6:37.6):1.6,((7:3.6,8:3.6):8.1,9:11.7):27.5,10:39.2):1.1,((11:24.8,12:24.8):13.0,13:37.8):2.5):2.9,14:43.2,(15:28.7,(16:2.7,17:2.7):26.0):14.5):2.1,18:45.3)Acer;
+
+END;
+
